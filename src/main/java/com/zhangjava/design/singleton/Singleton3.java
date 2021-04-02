@@ -1,12 +1,16 @@
 package com.zhangjava.design.singleton;
 
+import java.io.Serializable;
+
 /**
  * 双重检查锁单例
  *
  * @author zhangxu
  * @date 2021/4/1 21:10
  */
-public class Singleton3 {
+public class Singleton3 implements Serializable {
+
+    private static final long serialVersionUID = -8729212868336593368L;
 
     /**
      * 1.构造方法私有化，防止外部类使用new来创建对象
