@@ -1,52 +1,53 @@
-package com.zhangjava.design.factory.abs;
+package com.zhangjava.design.factory.method;
 
 import com.zhangjava.design.factory.Car;
 
 /**
- * 宝马汽车工厂类
+ * 奥迪汽车工厂类
  *
  * @author zhangxu
- * @date 2021/4/7 14:14
+ * @date 2021/4/7 14:05
  */
-public class BaoMaFactory implements CarFactory {
+public class AoDiCarFactory implements CarFactory {
+
     @Override
     public Car createCar(String type) {
         Car car = null;
         switch (type) {
             case "BeiJing":
-                car = new BeiJingBaoMa();
+                car = new BeiJingAoDi();
                 break;
             case "ShangHai":
-                car = new ShangHaiBaoMa();
+                car = new ShangHaiAoDi();
                 break;
             case "ShanXi":
-                car = new ShanXiBaoMa();
+                car = new ShanXiAoDi();
                 break;
             default:
         }
 
         return car;
     }
+
 }
 
-
-class BeiJingBaoMa extends Car {
+class BeiJingAoDi extends Car {
     @Override
     public void info() {
-        System.out.println("北京宝马汽车");
+        System.out.println("北京奥迪");
     }
 }
 
-class ShangHaiBaoMa extends Car {
+class ShangHaiAoDi extends Car {
     @Override
     public void info() {
-        System.out.println("上海宝马汽车");
+        System.out.println("上海奥迪");
     }
 }
 
-class ShanXiBaoMa extends Car {
+class ShanXiAoDi extends Car {
     @Override
     public void info() {
-        System.out.println("上海宝马汽车");
+        System.out.println("山西奥迪");
     }
 }

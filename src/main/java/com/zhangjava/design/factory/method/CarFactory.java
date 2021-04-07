@@ -1,4 +1,4 @@
-package com.zhangjava.design.factory.abs;
+package com.zhangjava.design.factory.method;
 
 
 import com.zhangjava.design.factory.Car;
