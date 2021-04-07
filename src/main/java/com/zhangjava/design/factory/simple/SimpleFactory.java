@@ -1,5 +1,7 @@
 package com.zhangjava.design.factory.simple;
 
+import com.zhangjava.design.factory.Car;
+
 /**
  * 简单工厂模式
  *
@@ -40,11 +42,6 @@ public class SimpleFactory {
         car2.info();
         car3.info();
     }
-}
-
-
-abstract class Car {
-    public abstract void info();
 }
 
 class AoDi extends Car {
