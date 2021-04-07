@@ -1,14 +1,16 @@
-package com.zhangjava.design.factory.method;
+package com.zhangjava.design.factory.abs;
 
 import com.zhangjava.design.factory.Car;
 
 /**
+ * 宝马汽车工厂类
+ *
  * @author zhangxu
  * @date 2021/4/7 14:14
  */
-public class BaoMaFactory extends CarFactory {
+public class BaoMaFactory implements CarFactory {
     @Override
-    Car createCar(String type) {
+    public Car createCar(String type) {
         Car car = null;
         switch (type) {
             case "BeiJing":

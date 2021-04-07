@@ -1,22 +1,23 @@
-package com.zhangjava.design.factory.method;
+package com.zhangjava.design.factory.abs;
 
 
 import com.zhangjava.design.factory.Car;
 
 /**
- * 工厂方法模式
+ * 抽象工厂模式
  *
  * @author zhangxu
  * @date 2021/4/7 14:01
  */
-public abstract class CarFactory {
+public interface CarFactory {
     /**
      * 定义一个抽象方法，让各个子类自己实现
      *
      * @param type
      * @return
      */
-    abstract Car createCar(String type);
+    Car createCar(String type);
+
 
     public static void main(String[] args) {
         CarFactory carFactory = new AoDiCarFactory();
